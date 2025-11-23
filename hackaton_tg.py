@@ -14,7 +14,7 @@ bot = telebot.TeleBot(TELEGRAB_KEY)
 # --- Команды ---
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "Привет! Я бот который поможет не только бояться но и помогать природе.\nКоманды:\n/donat - поддержать экологические проекты через донаты.\n/report - сообщить о несанкционированных свалках.\n/advice - получить советы по экологии.\n/news - последние новости об экологии.")
+    bot.reply_to(message, "Привет! Я бот с которым можно помочь природе.\nКоманды:\n/donat - поддержать экологические проекты через донаты.\n/report - сообщить о несанкционированных свалках.\n/advice - получить советы по экологии.\n/news - последние новости об экологии.")
 
 @bot.message_handler(commands=['donat'])
 def send_donat(message):
@@ -85,3 +85,4 @@ def send_news(message):
 
 # --- Запуск бота ---
 bot.polling()
+
